@@ -14,7 +14,7 @@ Use this project as a starting point or reference for your own API automation le
 
 ---
 
-## Tech Stack
+# Tech Stack
 
 - Java 17+  
 - Maven  
@@ -23,7 +23,21 @@ Use this project as a starting point or reference for your own API automation le
 
 ---
 
-## How to run
+# Dependencies added
+
+✅ Rest Assured
+
+Used to send HTTP requests and validate API responses in a simple, fluent Java style.
+
+✅ Hamcrest
+
+Used for readable and expressive assertions like equalTo() inside Rest Assured tests.
+
+✅ TestNG
+
+Used as a testing framework to organize, run, and structure test methods (for future expansion).
+
+# How to run
 
 1. Clone the repository  
    ```bash
@@ -32,26 +46,31 @@ Use this project as a starting point or reference for your own API automation le
 2. Make sure you have Java + Maven installed. Then build and run:
     "mvn clean compile exec:java -Dexec.mainClass=com.yourpackage.Project1"
     
-##Test Flow
+# Test Flow
 	
-##Create 
+## Create 
 - Sends a POST request to create a new place
 - Includes JSON body and query parameter key
 - Parse the JSON response
 - Extract place_id using JsonPath
 
-##Update
+## Update
 - Sends a PUT request to update the address
 - Uses the extracted place_id
 
-##Get & Verify
+## Get & Verify
 - GET request retrieves the updated place
 - Asserts that the new address matches expected value
 
-##Delete
+## Delete
 - DELETE request removes the created place
 
-##Delete again or fetch again
+## Delete again or fetch again
 - API returns an error confirming the resource no longer exists
 
 This flow covers a complete CRUD lifecycle, making it ideal for learning API automation basics.
+
+# Future Improvements
+
+- Move from main() to TestNG / JUnit test classes (better structure)
+- Add logging / reporting (Allure, Extent Reports, etc.)
